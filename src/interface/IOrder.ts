@@ -7,7 +7,7 @@ export default interface IOrder {
   no: string;
   buyer: IUser;
   shippingAddress: IAddress;
-  products: [{ product: IProduct; quantity: number }];
+  products: { product: IProduct; quantity: number }[];
   type: EOrderType;
   status: EOrderStatus;
 }

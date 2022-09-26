@@ -20,6 +20,11 @@ export interface IPrice {
   discount: { amount: number; description: string };
 }
 
+export interface IImages {
+  no: number;
+  path: string;
+}
+
 export default interface IProduct {
   id: string;
   code: string;
@@ -28,10 +33,11 @@ export default interface IProduct {
   brand: string;
   distributor: IDistributor;
   stock: IStock;
-  price: IPrice;
-  createdAt: number;
-  updatedAt: number;
   notes?: string;
   status: EStatus;
+  price: IPrice;
+  images: IImages[];
+  createdAt: number;
+  updatedAt: number;
   setting: { show: boolean; paymentType: EPaymentType };
 }
