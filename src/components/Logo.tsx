@@ -1,11 +1,12 @@
-import { Image, Stack, Text } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import Assets from "../assets";
+import { Image, Stack, Text } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+
+import Assets from '../assets';
 
 function Logo() {
   return (
-    <Link to={"/"}>
-      <Stack direction="row" justifyContent={"center"} alignItems={"center"}>
+    <Link to={'/'}>
+      <Stack direction="row" justifyContent={'center'} alignItems={'center'}>
         <Image
           borderRadius="full"
           boxSize="32px"

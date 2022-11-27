@@ -4,22 +4,23 @@ import {
   DrawerContent,
   useColorModeValue,
   useDisclosure,
-} from "@chakra-ui/react";
-import { FC } from "react";
-import { Outlet } from "react-router-dom";
-import MobileNav from "../layout/MobileNav";
-import Sidebar from "../layout/Sidebar";
-import Footer from "./Footer";
+} from '@chakra-ui/react';
+import { FC } from 'react';
+import { Outlet } from 'react-router-dom';
+
+import Footer from './Footer';
+import MobileNav from './MobileNav';
+import Sidebar from './Sidebar';
 
 interface LayoutProps {}
 
 const Layout: FC<LayoutProps> = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Box minH="100vh" bg={useColorModeValue("gray.100", "gray.900")}>
+    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <Sidebar
         onClose={() => onClose}
-        display={{ base: "none", md: "block" }}
+        display={{ base: 'none', md: 'block' }}
       />
       <Drawer
         autoFocus={false}

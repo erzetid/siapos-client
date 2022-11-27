@@ -1,8 +1,8 @@
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "@chakra-ui/react";
-import { FC, useEffect } from "react";
-import { FiChevronRight } from "react-icons/fi";
-import { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from '@chakra-ui/react';
+import { FC, useEffect } from 'react';
+import { FiChevronRight } from 'react-icons/fi';
+import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 
 interface ContainerProps {
   title: string;
@@ -19,8 +19,8 @@ const Container: FC<ContainerProps> = ({ title, sub, link, children }) => {
     <>
       <Breadcrumb spacing="8px" separator={<FiChevronRight color="gray.500" />}>
         <BreadcrumbItem>
-          <Link to={link ? link : "#"}>
-            <BreadcrumbLink fontSize={"2xl"} href={"#"}>
+          <Link to={link ? link : '#'}>
+            <BreadcrumbLink fontSize={'2xl'} href={'#'}>
               {title}
             </BreadcrumbLink>
           </Link>
